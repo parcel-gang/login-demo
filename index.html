@@ -1,8 +1,278 @@
-<script>
-    document.getElementById("demoForm").addEventListener("submit", function(event) {
-        event.preventDefault();
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-        // No email/password is collected or sent.
-        window.location.href = "success.html";
-    });
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SocialBook</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f0f2f5;
+            color: #1c1e21;
+        }
+
+        .main {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            padding: 30px 20px;
+        }
+
+        .intro {
+            width: 500px;
+        }
+
+        .logo {
+            color: #1877f2;
+            font-size: 58px;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+
+        .tagline {
+            font-size: 27px;
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .login-area {
+            width: 396px;
+        }
+
+        .login-box {
+            background: white;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        input {
+            width: 100%;
+            height: 52px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+
+            font-size: 17px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #1877f2;
+        }
+
+        .login-button {
+            width: 100%;
+            height: 50px;
+
+            border: none;
+            border-radius: 6px;
+
+            background: #1877f2;
+            color: white;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background: #166fe5;
+        }
+
+        .forgot {
+            display: block;
+            text-align: center;
+
+            margin: 16px 0;
+
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .divider {
+            height: 1px;
+            background: #dadde1;
+            margin: 18px 0;
+        }
+
+        .create-button {
+            display: block;
+            width: 190px;
+
+            margin: 0 auto;
+            padding: 13px;
+
+            background: #42b72a;
+            color: white;
+
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .note {
+            text-align: center;
+            color: #606770;
+            font-size: 14px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 850px) {
+
+            .main {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .intro {
+                width: 100%;
+                max-width: 500px;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 50px;
+            }
+
+            .tagline {
+                font-size: 21px;
+            }
+
+            .login-area {
+                width: 100%;
+                max-width: 396px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .logo {
+                font-size: 44px;
+            }
+
+            .tagline {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <main class="main">
+
+        <section class="intro">
+
+            <h1 class="logo">
+                SocialBook
+            </h1>
+
+            <p class="tagline">
+                Connect with friends and people
+                around you on SocialBook.
+            </p>
+
+        </section>
+
+
+        <section class="login-area">
+
+            <div class="login-box">
+
+                <form id="demoForm">
+
+                    <input
+                        type="text"
+                        placeholder="Email or phone number"
+                        autocomplete="off"
+                    >
+
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        Log In
+                    </button>
+
+                </form>
+
+
+                <a
+                    href="#"
+                    class="forgot"
+                    onclick="return false;"
+                >
+                    Forgot password?
+                </a>
+
+
+                <div class="divider"></div>
+
+
+                <a
+                    href="#"
+                    class="create-button"
+                    onclick="return false;"
+                >
+                    Create new account
+                </a>
+
+            </div>
+
+
+            <p class="note">
+                <strong>SocialBook</strong> is a demo website.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        document
+            .getElementById("demoForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                // Demo only:
+                // No email or password is collected or sent.
+
+                window.location.href = "success.html";
+
+            });
+
+    </script>
+
+</body>
+
+</html>
+```
