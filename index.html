@@ -1,6 +1,7 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,392 +15,109 @@
 
         body {
             margin: 0;
+            min-height: 100vh;
             font-family: Arial, Helvetica, sans-serif;
             background: #f0f2f5;
-            color: #1c1e21;
-        }
 
-        .page {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main {
-            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 80px;
-            padding: 40px 20px;
         }
 
-        /* LEFT SIDE */
-        .intro {
-            width: 500px;
-            margin-top: -40px;
+        .success-box {
+            width: 400px;
+            max-width: 90%;
+            background: white;
+
+            padding: 35px 25px;
+            border-radius: 10px;
+
+            text-align: center;
+
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
         }
 
         .logo {
             color: #1877f2;
-            font-size: 58px;
+            font-size: 42px;
             font-weight: bold;
-            letter-spacing: -2px;
-            margin: 0 0 10px;
+            margin-bottom: 25px;
         }
 
-        .tagline {
-            font-size: 28px;
-            line-height: 1.25;
-            margin: 0;
+        .success-icon {
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+            background: #42b72a;
+
+            color: white;
+            font-size: 38px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* LOGIN CARD */
-        .login-area {
-            width: 396px;
+        h2 {
+            margin: 0 0 12px;
+            color: #1c1e21;
         }
 
-        .login-box {
-            background: #fff;
-            padding: 18px;
-            border-radius: 8px;
-            box-shadow: 0 2px 14px rgba(0, 0, 0, 0.15);
+        p {
+            color: #606770;
+            line-height: 1.5;
+            font-size: 15px;
         }
 
-        .login-box input {
-            width: 100%;
-            height: 52px;
-            padding: 14px 16px;
-            margin-bottom: 12px;
+        .back-button {
+            display: inline-block;
 
-            border: 1px solid #dddfe2;
-            border-radius: 6px;
-
-            font-size: 17px;
-            outline: none;
-            transition: border 0.2s, box-shadow 0.2s;
-        }
-
-        .login-box input:focus {
-            border-color: #1877f2;
-            box-shadow: 0 0 0 2px #e7f3ff;
-        }
-
-        .login-button {
-            width: 100%;
-            height: 50px;
-
-            border: none;
-            border-radius: 6px;
+            margin-top: 20px;
+            padding: 12px 25px;
 
             background: #1877f2;
             color: white;
 
-            font-size: 20px;
-            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
 
-            cursor: pointer;
-            transition: background 0.2s;
+            font-weight: bold;
         }
 
-        .login-button:hover {
+        .back-button:hover {
             background: #166fe5;
-        }
-
-        .forgot {
-            display: block;
-            text-align: center;
-
-            margin: 16px 0;
-
-            color: #1877f2;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .forgot:hover {
-            text-decoration: underline;
-        }
-
-        .divider {
-            height: 1px;
-            background: #dadde1;
-            margin: 18px 0;
-        }
-
-        .create-button {
-            display: block;
-            width: 190px;
-            margin: 0 auto;
-
-            padding: 13px 10px;
-
-            border: none;
-            border-radius: 6px;
-
-            background: #42b72a;
-            color: white;
-
-            text-align: center;
-            text-decoration: none;
-
-            font-size: 17px;
-            font-weight: bold;
-
-            cursor: pointer;
-        }
-
-        .create-button:hover {
-            background: #36a420;
-        }
-
-        /* DEMO MESSAGE */
-        .message {
-            display: none;
-
-            margin-top: 15px;
-            padding: 12px;
-
-            background: #e7f3ff;
-            color: #1877f2;
-
-            border-radius: 6px;
-            text-align: center;
-
-            font-size: 14px;
-        }
-
-        .demo-note {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 25px;
-            color: #606770;
-        }
-
-        .demo-note strong {
-            color: #1c1e21;
-        }
-
-        /* FOOTER */
-        footer {
-            background: white;
-            padding: 20px;
-            text-align: center;
-            color: #737373;
-            font-size: 13px;
-            border-top: 1px solid #ddd;
-        }
-
-        /* MOBILE */
-        @media (max-width: 850px) {
-
-            .main {
-                flex-direction: column;
-                gap: 30px;
-                padding-top: 50px;
-            }
-
-            .intro {
-                width: 100%;
-                max-width: 500px;
-                text-align: center;
-                margin-top: 0;
-            }
-
-            .logo {
-                font-size: 50px;
-            }
-
-            .tagline {
-                font-size: 21px;
-            }
-
-            .login-area {
-                width: 100%;
-                max-width: 396px;
-            }
-        }
-
-        @media (max-width: 450px) {
-
-            .main {
-                padding: 30px 15px;
-            }
-
-            .logo {
-                font-size: 44px;
-            }
-
-            .tagline {
-                font-size: 19px;
-            }
-
-            .login-box {
-                padding: 15px;
-            }
         }
     </style>
 </head>
 
 <body>
 
-<div class="page">
+    <div class="success-box">
 
-    <main class="main">
+        <div class="logo">
+            SocialBook
+        </div>
 
-        <!-- LEFT SIDE -->
-        <section class="intro">
+        <div class="success-icon">
+            ✓
+        </div>
 
-            <h1 class="logo">
-                SocialBook
-            </h1>
+        <h2>Demo login successful</h2>
 
-            <p class="tagline">
-                Connect with friends and people
-                around you on SocialBook.
-            </p>
+        <p>
+            No information was collected or sent.
+        </p>
 
-        </section>
+        <a href="index.html" class="back-button">
+            Back to Login
+        </a>
 
-
-        <!-- RIGHT SIDE -->
-        <section class="login-area">
-
-            <div class="login-box">
-
-                <form id="demoForm">
-
-                    <input
-                        type="text"
-                        id="email"
-                        placeholder="Email or phone number"
-                        autocomplete="off"
-                    >
-
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Password"
-                        autocomplete="off"
-                    >
-
-                    <button
-                        type="submit"
-                        class="login-button"
-                    >
-                        Log In
-                    </button>
-
-                </form>
-
-
-                <a
-                    href="#"
-                    class="forgot"
-                    id="forgotLink"
-                >
-                    Forgot password?
-                </a>
-
-
-                <div class="divider"></div>
-
-
-                <a
-                    href="#"
-                    class="create-button"
-                    id="createAccount"
-                >
-                    Create new account
-                </a>
-
-
-                <!-- DEMO MESSAGE -->
-                <div
-                    class="message"
-                    id="message"
-                >
-                    Demo login successful.
-                    No information was collected or sent.
-                </div>
-
-            </div>
-
-
-            <p class="demo-note">
-                <strong>Create a Page</strong>
-                for your community, brand or project.
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-        © 2026 SocialBook · Demo Website
-    </footer>
-
-</div>
-
-
-<script>
-
-    /*
-     * DEMO LOGIN
-     * -----------------------------
-     * This form does NOT send any
-     * username or password anywhere.
-     */
-
-    document
-        .getElementById("demoForm")
-        .addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            const message =
-                document.getElementById("message");
-
-            message.style.display = "block";
-
-            this.reset();
-        });
-
-
-    /*
-     * FORGOT PASSWORD DEMO
-     */
-
-    document
-        .getElementById("forgotLink")
-        .addEventListener("click", function(event) {
-
-            event.preventDefault();
-
-            alert(
-                "Password recovery is not available in this demo."
-            );
-        });
-
-
-    /*
-     * CREATE ACCOUNT DEMO
-     */
-
-    document
-        .getElementById("createAccount")
-        .addEventListener("click", function(event) {
-
-            event.preventDefault();
-
-            alert(
-                "Account creation is not available in this demo."
-            );
-        });
-
-</script>
+    </div>
 
 </body>
+
 </html>
 ```
